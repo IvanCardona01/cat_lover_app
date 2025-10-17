@@ -14,7 +14,7 @@ class HomeView extends StatelessWidget {
             color: Get.theme.colorScheme.surface,
             child: Center(
               child: Text(
-                'Home Screen',
+                'home'.tr,
                 style: Get.theme.textTheme.titleLarge,
               ),
             ),
