@@ -3,7 +3,6 @@ import 'package:cat_lover_app/app/routes/app_routes.dart';
 import 'package:cat_lover_app/features/home/views/home_view.dart';
 import 'package:cat_lover_app/features/tab_bar/views/tab_bar_view.dart';
 import 'package:cat_lover_app/features/tab_bar/bindings/tab_bar_binding.dart';
-import 'package:cat_lover_app/features/favorites/views/favorites_view.dart';
 import 'package:cat_lover_app/features/settings/views/settings_view.dart';
 
 class AppPages {
@@ -16,10 +15,6 @@ class AppPages {
     GetPage(
       name: AppRoutes.home,
       page: () => HomeView()
-    ),
-    GetPage(
-      name: AppRoutes.favorites,
-      page: () => FavoritesView()
     ),
     GetPage(
       name: AppRoutes.settings,

@@ -10,5 +10,10 @@ class EsTranslation {
     'no_breeds_available': 'No hay razas disponibles',
     'no_breeds_message': 'No se pudieron cargar las razas de gatos. Verifica tu conexión a internet e intenta nuevamente.',
     'retry': 'Reintentar',
+    'search_breed_hint': 'Buscar raza...',
+    'no_results_found': 'No se encontraron resultados',
+    'no_results_message': 'No hay razas que coincidan con tu búsqueda',
+    'clear_search': 'Limpiar búsqueda',
+    'home_title': 'Razas de gatos',
   };
 }

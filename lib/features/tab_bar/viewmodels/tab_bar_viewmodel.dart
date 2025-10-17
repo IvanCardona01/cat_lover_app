@@ -13,11 +13,6 @@ class TabBarViewModel extends GetxController {
       title: 'home'.tr,
     ),
     TabItemModel(
-      route: AppRoutes.favorites,
-      icon: Icons.favorite,
-      title: 'favorites'.tr,
-    ),
-    TabItemModel(
       route: AppRoutes.settings,
       icon: Icons.settings,
       title: 'settings'.tr,
