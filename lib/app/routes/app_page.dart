@@ -1,3 +1,5 @@
+import 'package:cat_lover_app/features/home/bindings/breed_details_binding.dart';
+import 'package:cat_lover_app/features/home/views/breed_details_view.dart';
 import 'package:get/get.dart';
 import 'package:cat_lover_app/app/routes/app_routes.dart';
 import 'package:cat_lover_app/features/home/views/home_view.dart';
@@ -19,6 +21,11 @@ class AppPages {
     GetPage(
       name: AppRoutes.settings,
       page: () => SettingsView()
+    ),
+    GetPage(
+      name: AppRoutes.breedDetails,
+      page: () => BreedDetailsView(),
+      binding: BreedDetailsBinding(),
     ),
   ];
 }

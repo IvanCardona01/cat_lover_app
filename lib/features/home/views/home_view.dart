@@ -1,3 +1,4 @@
+import 'package:cat_lover_app/app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cat_lover_app/features/home/viewmodels/home_viewmodel.dart';
@@ -113,12 +114,7 @@ class HomeView extends GetView<HomeViewModel> {
                     itemBuilder: (context, index) => CatBreedCard(
                       breed: controller.breeds[index],
                       onMorePressed: () {
-                        // TODO: Implementar navegación a detalles de la raza
-                        Get.snackbar(
-                          'Información',
-                          'Detalles de ${controller.breeds[index].name}',
-                          snackPosition: SnackPosition.BOTTOM,
-                        );
+                        Get.toNamed(AppRoutes.breedDetails, arguments: {'breed': controller.breeds[index]});
                       },
                     ),
                   );
