@@ -3,5 +3,8 @@ class EsTranslation {
     'home': 'Inicio',
     'favorites': 'Favoritos',
     'settings': 'Ajustes',
+    'more': 'Más...',
+    'country_of_origin': 'País de origen',
+    'intelligence': 'Inteligencia',
   };
 }

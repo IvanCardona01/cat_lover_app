@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cat_lover_app/features/home/viewmodels/home_viewmodel.dart';
+import 'package:cat_lover_app/shared/widgets/cat_breed_card.dart';
 
 class HomeView extends GetView<HomeViewModel> {
   const HomeView({super.key});
@@ -13,12 +14,19 @@ class HomeView extends GetView<HomeViewModel> {
         child: Obx(
           () => ListView.builder(
             itemCount: controller.breeds.length,
-            itemBuilder: (context, index) => Text(
-              controller.breeds[index].name,
-                style: Get.theme.textTheme.titleLarge,
-              ),
+            itemBuilder: (context, index) => CatBreedCard(
+              breed: controller.breeds[index],
+              onMorePressed: () {
+                // TODO: Implementar navegación a detalles de la raza
+                Get.snackbar(
+                  'Información',
+                  'Detalles de ${controller.breeds[index].name}',
+                  snackPosition: SnackPosition.BOTTOM,
+                );
+              },
             ),
           ),
+        ),
       ),
     );
   }
