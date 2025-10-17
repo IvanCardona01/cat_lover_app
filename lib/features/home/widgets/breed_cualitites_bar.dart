@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class BreedCualititesBar extends StatelessWidget {
   final String title;
@@ -19,15 +18,15 @@ class BreedCualititesBar extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: Get.theme.textTheme.bodyMedium?.copyWith(
-                  color: Get.theme.colorScheme.onSurface,
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  color: Theme.of(context).colorScheme.onSurface,
                 ),
               ),
               Text(
                 '$value/5',
-                style: Get.theme.textTheme.bodyMedium?.copyWith(
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                   fontWeight: FontWeight.bold,
-                  color: Get.theme.colorScheme.primary,
+                  color: Theme.of(context).colorScheme.primary,
                 ),
               ),
             ],
@@ -38,9 +37,9 @@ class BreedCualititesBar extends StatelessWidget {
             child: LinearProgressIndicator(
               value: value / 5,
               minHeight: 8,
-              backgroundColor: Get.theme.colorScheme.surfaceContainerHighest,
+              backgroundColor: Theme.of(context).colorScheme.surfaceContainerHighest,
               valueColor: AlwaysStoppedAnimation<Color>(
-                Get.theme.colorScheme.primary,
+                Theme.of(context).colorScheme.primary,
               ),
             ),
           ),

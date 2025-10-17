@@ -28,7 +28,7 @@ class CatBreedCard extends StatelessWidget {
                 Expanded(
                   child: Text(
                     breed.name,
-                    style: Get.theme.textTheme.titleLarge?.copyWith(
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       fontWeight: FontWeight.bold,
                     ),
                     overflow: TextOverflow.ellipsis,
@@ -38,8 +38,8 @@ class CatBreedCard extends StatelessWidget {
                   onPressed: onMorePressed,
                   child: Text(
                     'more'.tr,
-                    style: Get.theme.textTheme.titleLarge?.copyWith(
-                      color: Get.theme.colorScheme.primary,
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                      color: Theme.of(context).colorScheme.primary,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -67,14 +67,14 @@ class CatBreedCard extends StatelessWidget {
                     children: [
                       Text(
                         'country_of_origin'.tr,
-                        style: Get.theme.textTheme.bodyMedium?.copyWith(
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       const SizedBox(height: 4),
                       Text(
                         breed.origin,
-                        style: Get.theme.textTheme.bodyLarge,
+                        style: Theme.of(context).textTheme.bodyLarge,
                         overflow: TextOverflow.ellipsis,
                       ),
                     ],
@@ -86,7 +86,7 @@ class CatBreedCard extends StatelessWidget {
                   children: [
                     Text(
                       'intelligence'.tr,
-                      style: Get.theme.textTheme.bodyMedium?.copyWith(
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -124,10 +124,10 @@ class _IntelligenceIndicator extends StatelessWidget {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: isFilled 
-                  ? Get.theme.colorScheme.primary 
+                  ? Theme.of(context).colorScheme.primary 
                   : Colors.transparent,
               border: Border.all(
-                color: Get.theme.colorScheme.outline,
+                color: Theme.of(context).colorScheme.outline,
                 width: 1.5,
               ),
             ),
@@ -136,8 +136,8 @@ class _IntelligenceIndicator extends StatelessWidget {
                 Icons.pets,
                 size: 10,
                 color: isFilled 
-                    ? Get.theme.colorScheme.onPrimary 
-                    : Get.theme.colorScheme.outline,
+                    ? Theme.of(context).colorScheme.onPrimary 
+                    : Theme.of(context).colorScheme.outline,
               ),
             ),
           ),

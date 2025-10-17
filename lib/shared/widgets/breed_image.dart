@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
 class BreedImage extends StatelessWidget {
@@ -19,7 +18,7 @@ class BreedImage extends StatelessWidget {
         height: 350,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Get.theme.colorScheme.surfaceContainerHighest,
+          color: Theme.of(context).colorScheme.surfaceContainerHighest,
           borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(24),
             bottomRight: Radius.circular(24),
@@ -27,7 +26,7 @@ class BreedImage extends StatelessWidget {
         ),
         child: Center(
           child: CircularProgressIndicator(
-            color: Get.theme.colorScheme.primary,
+            color: Theme.of(context).colorScheme.primary,
           ),
         ),
       ),
@@ -35,7 +34,7 @@ class BreedImage extends StatelessWidget {
         height: 350,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Get.theme.colorScheme.surfaceContainerHighest,
+          color: Theme.of(context).colorScheme.surfaceContainerHighest,
           borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(24),
             bottomRight: Radius.circular(24),
@@ -44,7 +43,7 @@ class BreedImage extends StatelessWidget {
         child: Icon(
           Icons.pets,
           size: 80,
-          color: Get.theme.colorScheme.onSurface,
+          color: Theme.of(context).colorScheme.onSurface,
         ),
       ),
     );

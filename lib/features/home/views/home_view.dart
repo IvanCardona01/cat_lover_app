@@ -13,7 +13,7 @@ class HomeView extends GetView<HomeViewModel> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Get.theme.colorScheme.surface,
+        color: Theme.of(context).colorScheme.surface,
         child: SafeArea(
           bottom: false,
           child: Column(
@@ -28,7 +28,7 @@ class HomeView extends GetView<HomeViewModel> {
                         'home_title'.tr,
                         style: Get.textTheme.headlineLarge?.copyWith(
                           fontWeight: FontWeight.bold,
-                          color: Get.theme.colorScheme.onSurface,
+                          color: Theme.of(context).colorScheme.onSurface,
                         ),
                       ),
                     ),
@@ -42,35 +42,35 @@ class HomeView extends GetView<HomeViewModel> {
                             ? IconButton(
                                 icon: Icon(
                                   Icons.clear,
-                                  color: Get.theme.colorScheme.onSurfaceVariant,
+                                  color: Theme.of(context).colorScheme.onSurfaceVariant,
                                 ),
                                 onPressed: () => controller.clearSearch(),
                               )
                             : const SizedBox.shrink()),
                         suffixIcon: Icon(
                           Icons.search,
-                          color: Get.theme.colorScheme.onSurfaceVariant,
+                          color: Theme.of(context).colorScheme.onSurfaceVariant,
                         ),
                         filled: true,
-                        fillColor: Get.theme.colorScheme.surfaceContainerHighest,
+                        fillColor: Theme.of(context).colorScheme.surfaceContainerHighest,
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide(
-                            color: Get.theme.colorScheme.outline.withValues(alpha: 0.5),
+                            color: Theme.of(context).colorScheme.outline.withValues(alpha: 0.5),
                             width: 1,
                           ),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide(
-                            color: Get.theme.colorScheme.primary,
+                            color: Theme.of(context).colorScheme.primary,
                             width: 2,
                           ),
                         ),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide(
-                            color: Get.theme.colorScheme.outline,
+                            color: Theme.of(context).colorScheme.outline,
                             width: 1,
                           ),
                         ),

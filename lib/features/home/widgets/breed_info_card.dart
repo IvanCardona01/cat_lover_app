@@ -17,9 +17,9 @@ class BreedInfoCard extends StatelessWidget {
       children: [
         Text(
           breed.name,
-          style: Get.theme.textTheme.headlineLarge?.copyWith(
+          style: Theme.of(context).textTheme.headlineLarge?.copyWith(
             fontWeight: FontWeight.bold,
-            color: Get.theme.colorScheme.onSurface,
+            color: Theme.of(context).colorScheme.onSurface,
           ),
         ),
         const SizedBox(height: 8),
@@ -28,13 +28,13 @@ class BreedInfoCard extends StatelessWidget {
             Icon(
               Icons.location_on,
               size: 20,
-              color: Get.theme.colorScheme.primary,
+              color: Theme.of(context).colorScheme.primary,
             ),
             const SizedBox(width: 4),
             Text(
               breed.origin,
-              style: Get.theme.textTheme.titleMedium?.copyWith(
-                color: Get.theme.colorScheme.onSurfaceVariant,
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                color: Theme.of(context).colorScheme.onSurfaceVariant,
               ),
             ),
           ],
@@ -44,16 +44,16 @@ class BreedInfoCard extends StatelessWidget {
 
         Text(
           'description'.tr,
-          style: Get.theme.textTheme.titleLarge?.copyWith(
+          style: Theme.of(context).textTheme.titleLarge?.copyWith(
             fontWeight: FontWeight.bold,
-            color: Get.theme.colorScheme.onSurface,
+            color: Theme.of(context).colorScheme.onSurface,
           ),
         ),
         const SizedBox(height: 8),
         Text(
           breed.description,
-          style: Get.theme.textTheme.bodyLarge?.copyWith(
-            color: Get.theme.colorScheme.onSurfaceVariant,
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+            color: Theme.of(context).colorScheme.onSurfaceVariant,
             height: 1.5,
           ),
           textAlign: TextAlign.justify,
@@ -63,9 +63,9 @@ class BreedInfoCard extends StatelessWidget {
 
         Text(
           'temperament'.tr,
-          style: Get.theme.textTheme.titleLarge?.copyWith(
+          style: Theme.of(context).textTheme.titleLarge?.copyWith(
             fontWeight: FontWeight.bold,
-            color: Get.theme.colorScheme.onSurface,
+            color: Theme.of(context).colorScheme.onSurface,
           ),
         ),
         const SizedBox(height: 8),
@@ -76,11 +76,11 @@ class BreedInfoCard extends StatelessWidget {
             return Chip(
               label: Text(
                 trait.trim(),
-                style: Get.theme.textTheme.bodyMedium?.copyWith(
-                  color: Get.theme.colorScheme.onSecondaryContainer,
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  color: Theme.of(context).colorScheme.onSecondaryContainer,
                 ),
               ),
-              backgroundColor: Get.theme.colorScheme.secondaryContainer,
+              backgroundColor: Theme.of(context).colorScheme.secondaryContainer,
               side: BorderSide.none,
             );
           }).toList(),
@@ -90,37 +90,37 @@ class BreedInfoCard extends StatelessWidget {
 
         Text(
           'general_info'.tr,
-          style: Get.theme.textTheme.titleLarge?.copyWith(
+          style: Theme.of(context).textTheme.titleLarge?.copyWith(
             fontWeight: FontWeight.bold,
-            color: Get.theme.colorScheme.onSurface,
+            color: Theme.of(context).colorScheme.onSurface,
           ),
         ),
         const SizedBox(height: 12),
         Container(
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: Get.theme.colorScheme.surfaceContainerHighest,
+            color: Theme.of(context).colorScheme.surfaceContainerHighest,
             borderRadius: BorderRadius.circular(12),
           ),
           child: Row(
             children: [
-              Icon(Icons.calendar_today, color: Get.theme.colorScheme.primary, size: 24),
+              Icon(Icons.calendar_today, color: Theme.of(context).colorScheme.primary, size: 24),
               const SizedBox(width: 12),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     'life_span'.tr,
-                    style: Get.theme.textTheme.bodyMedium?.copyWith(
-                      color: Get.theme.colorScheme.onSurfaceVariant,
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: Theme.of(context).colorScheme.onSurfaceVariant,
                     ),
                   ),
                   const SizedBox(height: 4),
                   Text(
                     breed.lifeSpan,
-                    style: Get.theme.textTheme.titleMedium?.copyWith(
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
                       fontWeight: FontWeight.bold,
-                      color: Get.theme.colorScheme.onSurface,
+                      color: Theme.of(context).colorScheme.onSurface,
                     ),
                   ),
                 ],

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class EmptyView extends StatelessWidget {
   final String? title;
@@ -38,14 +37,14 @@ class EmptyView extends StatelessWidget {
                     Icon(
                       icon ?? Icons.pets_outlined,
                       size: iconSize ?? 80,
-                      color: Get.theme.colorScheme.onSurface.withValues(alpha: 0.3),
+                      color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.3),
                     ),
                     const SizedBox(height: 24),
                     if (title != null) ...[
                       Text(
                         title!,
-                        style: Get.theme.textTheme.headlineSmall?.copyWith(
-                          color: Get.theme.colorScheme.onSurface,
+                        style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                          color: Theme.of(context).colorScheme.onSurface,
                           fontWeight: FontWeight.w600,
                         ),
                         textAlign: TextAlign.center,
@@ -55,8 +54,8 @@ class EmptyView extends StatelessWidget {
                     if (message != null) ...[
                       Text(
                         message!,
-                        style: Get.theme.textTheme.bodyMedium?.copyWith(
-                          color: Get.theme.colorScheme.onSurface.withValues(alpha: 0.7),
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7),
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -67,17 +66,17 @@ class EmptyView extends StatelessWidget {
                         onPressed: onRetry,
                         icon: Icon(
                           Icons.refresh,
-                          color: Get.theme.colorScheme.onPrimary,
+                          color: Theme.of(context).colorScheme.onPrimary,
                         ),
                         label: Text(
                           buttonText!,
-                          style: Get.theme.textTheme.bodyLarge?.copyWith(
-                            color: Get.theme.colorScheme.onPrimary,
+                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                            color: Theme.of(context).colorScheme.onPrimary,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Get.theme.colorScheme.primary,
+                          backgroundColor: Theme.of(context).colorScheme.primary,
                           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12),

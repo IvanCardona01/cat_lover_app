@@ -13,9 +13,9 @@ class BreedLifeStyle extends StatelessWidget {
       children: [
         Text(
           'lifestyle_traits'.tr,
-          style: Get.theme.textTheme.titleLarge?.copyWith(
+          style: Theme.of(context).textTheme.titleLarge?.copyWith(
             fontWeight: FontWeight.bold,
-            color: Get.theme.colorScheme.onSurface,
+            color: Theme.of(context).colorScheme.onSurface,
           ),
         ),
         const SizedBox(height: 12),
@@ -71,13 +71,13 @@ class BreedLifeStyleChip extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Get.theme.colorScheme.primaryContainer,
+        color: Theme.of(context).colorScheme.primaryContainer,
         borderRadius: BorderRadius.circular(12),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(icon, color: Get.theme.colorScheme.onPrimaryContainer, size: 24),
+          Icon(icon, color: Theme.of(context).colorScheme.onPrimaryContainer, size: 24),
           const SizedBox(width: 8),
           Flexible(
             child: Column(
@@ -85,16 +85,16 @@ class BreedLifeStyleChip extends StatelessWidget {
               children: [
                 Text(
                   label,
-                  style: Get.theme.textTheme.bodySmall?.copyWith(
-                    color: Get.theme.colorScheme.onPrimaryContainer,
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    color: Theme.of(context).colorScheme.onPrimaryContainer,
                   ),
                   overflow: TextOverflow.ellipsis,
                 ),
                 Text(
                   '$value/5',
-                  style: Get.theme.textTheme.titleMedium?.copyWith(
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
                     fontWeight: FontWeight.bold,
-                    color: Get.theme.colorScheme.onPrimaryContainer,
+                    color: Theme.of(context).colorScheme.onPrimaryContainer,
                   ),
                 ),
               ],

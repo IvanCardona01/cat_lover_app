@@ -42,7 +42,7 @@ class TabBarView extends GetView<TabBarViewModel> {
   }
 
   Widget _buildBottomTabBar(BuildContext context) {
-    final theme = Get.theme;
+    final theme = Theme.of(context);
     
     return Container(
       decoration: BoxDecoration(

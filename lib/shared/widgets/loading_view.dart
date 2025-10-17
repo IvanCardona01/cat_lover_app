@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class LoadingView extends StatelessWidget {
   final String? message;
@@ -18,15 +17,15 @@ class LoadingView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CircularProgressIndicator(
-            color: Get.theme.colorScheme.primary,
+            color: Theme.of(context).colorScheme.primary,
             strokeWidth: strokeWidth ?? 3,
           ),
           if (message != null) ...[
             const SizedBox(height: 16),
             Text(
               message!,
-              style: Get.theme.textTheme.bodyLarge?.copyWith(
-                color: Get.theme.colorScheme.onSurface.withValues(alpha: 0.7),
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7),
               ),
             ),
           ],

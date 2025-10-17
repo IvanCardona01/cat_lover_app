@@ -15,9 +15,9 @@ class BreedCualitites extends StatelessWidget {
       children: [
         Text(
           'personality_traits'.tr,
-          style: Get.theme.textTheme.titleLarge?.copyWith(
+          style: Theme.of(context).textTheme.titleLarge?.copyWith(
             fontWeight: FontWeight.bold,
-            color: Get.theme.colorScheme.onSurface,
+            color: Theme.of(context).colorScheme.onSurface,
           ),
         ),
         const SizedBox(height: 12),

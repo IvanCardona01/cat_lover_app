@@ -44,7 +44,7 @@ class BreedDetailsView extends GetView<BreedDetailsViewModel> {
                     leading: Container(
                       margin: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
-                        color: Get.theme.colorScheme.surface.withValues(
+                        color: Theme.of(context).colorScheme.surface.withValues(
                           alpha: 0.9,
                         ),
                         shape: BoxShape.circle,
@@ -52,7 +52,7 @@ class BreedDetailsView extends GetView<BreedDetailsViewModel> {
                       child: IconButton(
                         icon: Icon(
                           Icons.arrow_back,
-                          color: Get.theme.colorScheme.onSurface,
+                          color: Theme.of(context).colorScheme.onSurface,
                         ),
                         onPressed: () => Get.back(),
                       ),
@@ -87,7 +87,7 @@ class BreedDetailsView extends GetView<BreedDetailsViewModel> {
                             style: OutlinedButton.styleFrom(
                               padding: const EdgeInsets.symmetric(vertical: 16),
                               side: BorderSide(
-                                color: Get.theme.colorScheme.primary,
+                                color: Theme.of(context).colorScheme.primary,
                                 width: 2,
                               ),
                             ),

@@ -9,9 +9,9 @@ class SettingsView extends GetView<SettingsViewModel> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Get.theme.colorScheme.surface,
+        color: Theme.of(context).colorScheme.surface,
         child: Center(
-          child: Text('settings'.tr, style: Get.theme.textTheme.titleLarge),
+          child: Text('settings'.tr, style: Theme.of(context).textTheme.titleLarge),
         ),
       ),
     );
