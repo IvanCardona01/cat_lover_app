@@ -20,6 +20,18 @@ class DioProvider {
       ),
     );
     
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) {
+          options.headers['x-api-key'] = Env.apiKey;
+          return handler.next(options);
+        },
+        onError: (DioException error, handler) {
+          return handler.next(error);
+        },
+      ),
+    );
+    
     return dio;
   }
 }
