@@ -83,7 +83,7 @@ class TabBarView extends GetView<TabBarViewModel> {
                   ),
                   const SizedBox(height: 2),
                   Text(
-                    tab.title,
+                    tab.titleKey.tr,
                     style: TextStyle(
                       fontSize: 12,
                       color: isSelected

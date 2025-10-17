@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
       locale: Get.deviceLocale,
-      fallbackLocale: const Locale('es_ES'),
+      fallbackLocale: const Locale('es', 'ES'),
       translationsKeys: AppTranslations().keys,
     );
   }
