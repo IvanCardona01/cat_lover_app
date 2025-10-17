@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:cat_lover_app/features/home/viewmodels/home_viewmodel.dart';
+import 'package:cat_lover_app/features/settings/viewmodels/settings_viewmodel.dart';
 
-class HomeView extends GetView<HomeViewModel> {
-  const HomeView({super.key});
+class SettingsView extends GetView<SettingsViewModel> {
+  const SettingsView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class HomeView extends GetView<HomeViewModel> {
       body: Container(
         color: Get.theme.colorScheme.surface,
         child: Center(
-          child: Text('home'.tr, style: Get.theme.textTheme.titleLarge),
+          child: Text('settings'.tr, style: Get.theme.textTheme.titleLarge),
         ),
       ),
     );
