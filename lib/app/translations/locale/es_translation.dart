@@ -37,5 +37,12 @@ class EsTranslation {
     'error': 'Error',
     'cannot_open_url': 'No se puede abrir el enlace',
     'error_opening_url': 'Error al abrir el enlace',
+    'appearance': 'Aspecto',
+    'light': 'Claro',
+    'dark': 'Oscuro',
+    'language': 'Idioma',
+    'spanish': 'Español',
+    'english': 'Inglés',
+    'system': 'Sistema',
   };
 }

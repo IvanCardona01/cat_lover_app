@@ -37,5 +37,12 @@ class EnTranslation {
     'error': 'Error',
     'cannot_open_url': 'Cannot open link',
     'error_opening_url': 'Error opening link',
+    'appearance': 'Appearance',
+    'light': 'Light',
+    'dark': 'Dark',
+    'language': 'Language',
+    'spanish': 'Español',
+    'english': 'English',
+    'system': 'System',
   };
 }
