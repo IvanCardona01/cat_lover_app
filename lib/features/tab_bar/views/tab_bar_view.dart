@@ -55,48 +55,47 @@ class TabBarView extends GetView<TabBarViewModel> {
           ),
         ],
       ),
-      child: SafeArea(
-        child: TabBar(
-          dividerColor: Colors.transparent,
-          onTap: controller.onTabSelected,
-          labelColor: theme.colorScheme.primary,
-          unselectedLabelColor: theme.colorScheme.outline,
-          indicatorColor: Colors.transparent,
-          labelPadding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
-          labelStyle: theme.textTheme.labelSmall,
-          tabs: controller.tabs.asMap().entries.map((entry) {
-            return Obx(() {
-              final isSelected = controller.currentIndex.value == entry.key;
-              final tab = entry.value;
-              
-              return Tab(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(
-                      tab.icon,
-                      size: 24,
+      child: TabBar(
+        dividerColor: Colors.transparent,
+        onTap: controller.onTabSelected,
+        labelColor: theme.colorScheme.primary,
+        unselectedLabelColor: theme.colorScheme.outline,
+        indicatorColor: Colors.transparent,
+        padding: EdgeInsets.only(top: 10, bottom: 20),
+        labelPadding: const EdgeInsets.symmetric(vertical: 2, horizontal: 8),
+        labelStyle: theme.textTheme.labelSmall,
+        tabs: controller.tabs.asMap().entries.map((entry) {
+          return Obx(() {
+            final isSelected = controller.currentIndex.value == entry.key;
+            final tab = entry.value;
+            
+            return Tab(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                    tab.icon,
+                    size: 24,
+                    color: isSelected
+                        ? theme.colorScheme.primary
+                        : theme.colorScheme.outline,
+                  ),
+                  const SizedBox(height: 2),
+                  Text(
+                    tab.title,
+                    style: TextStyle(
+                      fontSize: 12,
                       color: isSelected
                           ? theme.colorScheme.primary
                           : theme.colorScheme.outline,
                     ),
-                    const SizedBox(height: 4),
-                    Text(
-                      tab.title,
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: isSelected
-                            ? theme.colorScheme.primary
-                            : theme.colorScheme.outline,
-                      ),
-                    ),
-                  ],
-                ),
-              );
-            });
-          }).toList(),
-        ),
+                  ),
+                ],
+              ),
+            );
+          });
+        }).toList(),
       ),
     );
   }
