@@ -9,7 +9,17 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<HomeViewModel>(
       builder: (viewModel) {
-        return Scaffold(body: Center(child: Text('Home Screen')));
+        return Scaffold(
+          body: Container(
+            color: Get.theme.colorScheme.surface,
+            child: Center(
+              child: Text(
+                'Home Screen',
+                style: Get.theme.textTheme.titleLarge,
+              ),
+            ),
+          ),
+        );
       },
     );
   }

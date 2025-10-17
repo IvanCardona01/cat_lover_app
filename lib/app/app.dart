@@ -1,6 +1,7 @@
 import 'package:cat_lover_app/app/routes/app_page.dart';
 import 'package:cat_lover_app/app/routes/app_routes.dart';
 import 'package:cat_lover_app/features/splash/bindings/splash_binding.dart';
+import 'package:cat_lover_app/app/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -15,6 +16,9 @@ class MyApp extends StatelessWidget {
       initialBinding: SplashBinding(),
       initialRoute: AppRoutes.splash,
       getPages: AppPages.pages,
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.system,
     );
   }
 }
