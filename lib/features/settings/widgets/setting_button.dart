@@ -27,6 +27,7 @@ class SettingButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          height: 60,
           decoration: BoxDecoration(
             border: Border.all(
               color: Theme.of(

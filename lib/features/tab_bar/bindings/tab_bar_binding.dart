@@ -1,11 +1,11 @@
 import 'package:cat_lover_app/core/network/domain/network_repository.dart';
 import 'package:cat_lover_app/features/home/viewmodels/home_viewmodel.dart';
-import 'package:cat_lover_app/features/settings/viewmodels/settings_viewmodel.dart';
 import '../viewmodels/tab_bar_viewmodel.dart';
 import 'package:get/get.dart';
 import 'package:cat_lover_app/features/home/domain/home_repository.dart';
 import 'package:cat_lover_app/features/home/data/home_repository_impl.dart';
-
+import 'package:cat_lover_app/features/settings/domain/settings_repository.dart';
+import 'package:cat_lover_app/features/settings/viewmodels/settings_viewmodel.dart';
 class TabBarBinding extends Bindings {
   @override
   void dependencies() {
@@ -14,7 +14,8 @@ class TabBarBinding extends Bindings {
     Get.lazyPut<HomeRepository>(() => HomeRepositoryImpl(networkRepository));
     Get.lazyPut<HomeViewModel>(() => HomeViewModel(Get.find<HomeRepository>()));
 
-    Get.lazyPut<SettingsViewModel>(() => SettingsViewModel());
+    final settingsRepository = Get.find<SettingsRepository>();
+    Get.lazyPut<SettingsViewModel>(() => SettingsViewModel(settingsRepository));
 
     Get.lazyPut<TabBarViewModel>(() => TabBarViewModel());
   }
