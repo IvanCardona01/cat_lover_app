@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cat_lover_app/features/home/models/breed_model_response.dart';
+import 'package:cat_lover_app/shared/widgets/breed_image.dart';
 
 class CatBreedCard extends StatelessWidget {
   final BreedModel breed;
@@ -51,43 +52,7 @@ class CatBreedCard extends StatelessWidget {
             Center(
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(12),
-                child: Image.network(
-                  'https://cdn2.thecatapi.com/images/${breed.referenceImageId ?? 'placeholder'}.jpg',
-                  height: 200,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
-                  errorBuilder: (context, error, stackTrace) {
-                    return Container(
-                      height: 200,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        color: Get.theme.colorScheme.surfaceContainerHighest,
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Icon(
-                        Icons.pets,
-                        size: 64,
-                        color: Get.theme.colorScheme.onSurface,
-                      ),
-                    );
-                  },
-                  loadingBuilder: (context, child, loadingProgress) {
-                    if (loadingProgress == null) return child;
-                    return Container(
-                      height: 200,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        color: Get.theme.colorScheme.surfaceContainerHighest,
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Center(
-                        child: CircularProgressIndicator(
-                          color: Get.theme.colorScheme.primary,
-                        ),
-                      ),
-                    );
-                  },
-                ),
+                child: BreedImage(referenceImageId: breed.referenceImageId),
               ),
             ),
             

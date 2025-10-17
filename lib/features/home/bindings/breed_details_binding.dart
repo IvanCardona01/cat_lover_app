@@ -6,7 +6,6 @@ class BreedDetailsBinding extends Bindings {
   @override
   void dependencies() {
     final BreedModel? breed = Get.arguments['breed'];
-    print(breed);
     Get.lazyPut<BreedDetailsViewModel>(() => BreedDetailsViewModel(breed));
   }
 }

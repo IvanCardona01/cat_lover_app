@@ -15,6 +15,7 @@ class HomeView extends GetView<HomeViewModel> {
       body: Container(
         color: Get.theme.colorScheme.surface,
         child: SafeArea(
+          bottom: false,
           child: Column(
             children: [
               Padding(
@@ -109,7 +110,6 @@ class HomeView extends GetView<HomeViewModel> {
                   }
                   
                   return ListView.builder(
-                    padding: const EdgeInsets.only(bottom: 16),
                     itemCount: controller.breeds.length,
                     itemBuilder: (context, index) => CatBreedCard(
                       breed: controller.breeds[index],
