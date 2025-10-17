@@ -20,9 +20,7 @@ class TabBarView extends GetView<TabBarViewModel> {
                   return GetPageRoute(
                     page: () => Obx(() {
                       final currentRoute = controller
-                          .tabs[controller.currentIndex.value]['route'] as String?;
-                      
-                      if (currentRoute == null) return _getDefaultPage();
+                          .tabs[controller.currentIndex.value].route;
 
                       final definedPage = AppPages.pages.firstWhereOrNull(
                         (page) => page.name == currentRoute,
@@ -69,7 +67,7 @@ class TabBarView extends GetView<TabBarViewModel> {
           tabs: controller.tabs.asMap().entries.map((entry) {
             return Obx(() {
               final isSelected = controller.currentIndex.value == entry.key;
-              final item = entry.value;
+              final tab = entry.value;
               
               return Tab(
                 child: Column(
@@ -77,7 +75,7 @@ class TabBarView extends GetView<TabBarViewModel> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Icon(
-                      item['icon'] as IconData,
+                      tab.icon,
                       size: 24,
                       color: isSelected
                           ? theme.colorScheme.primary
@@ -85,7 +83,7 @@ class TabBarView extends GetView<TabBarViewModel> {
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      item['title'] as String,
+                      tab.title,
                       style: TextStyle(
                         fontSize: 12,
                         color: isSelected
