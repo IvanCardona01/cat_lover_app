@@ -10,9 +10,15 @@ class HomeView extends GetView<HomeViewModel> {
     return Scaffold(
       body: Container(
         color: Get.theme.colorScheme.surface,
-        child: Center(
-          child: Text('home'.tr, style: Get.theme.textTheme.titleLarge),
-        ),
+        child: Obx(
+          () => ListView.builder(
+            itemCount: controller.breeds.length,
+            itemBuilder: (context, index) => Text(
+              controller.breeds[index].name,
+                style: Get.theme.textTheme.titleLarge,
+              ),
+            ),
+          ),
       ),
     );
   }
