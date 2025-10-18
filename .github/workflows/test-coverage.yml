@@ -18,6 +18,12 @@ jobs:
         with:
           flutter-version: '3.32.0'
 
+      - name: Create .env file from GitHub Secrets
+        run: |
+          echo "BASE_URL=${{ secrets.BASE_URL }}" > .env
+          echo "API_KEY=${{ secrets.API_KEY }}" >> .env
+          echo "STORAGE_NAME=${{ secrets.STORAGE_NAME }}" >> .env
+
       - name: Get dependencies
         run: flutter pub get
 
